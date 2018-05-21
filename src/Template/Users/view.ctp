@@ -35,7 +35,7 @@
           <td><?= h($user->address) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Tel') ?></th>
+          <th scope="row"><?= __('電話番号') ?></th>
           <td><?= h($user->tel) ?></td>
       </tr>
       <tr>
