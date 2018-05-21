@@ -11,6 +11,8 @@
 
 </div>
 <div id="right_center">
+  <?=$this->Flash->render()?>
+  <br>
 
 
   <?= $this->Form->create($user) ?>

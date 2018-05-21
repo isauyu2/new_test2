@@ -40,7 +40,7 @@
 
     </div>
     <div id="right">
-      <?=$this->Flash->render()?>
+
       <div id="content">
         <?=$this->fetch('content')?>
       </div>

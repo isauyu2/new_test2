@@ -5,12 +5,10 @@
  */
 ?>
 <div id="right_top">
-  <h1>会員登録</h1>
-
-  新規会員の情報を入力してください
-
+  <h1>会員情報詳細</h1>
 </div>
 <div id="right_center">
+  <br>
 
 
   <table id="test_table" border="1">
@@ -43,28 +41,28 @@
           <td><?= h($user->email) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Password') ?></th>
+          <th scope="row"><?= __('パスワード') ?></th>
           <td><?= h($user->password) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Role') ?></th>
+          <th scope="row"><?= __('会員種別') ?></th>
           <td><?= h($user->role) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Birthday') ?></th>
+          <th scope="row"><?= __('生年月日') ?></th>
           <td><?= h($user->birthday) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Add Date') ?></th>
+          <th scope="row"><?= __('入会年月日') ?></th>
           <td><?= h($user->add_date) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Delete Date') ?></th>
+          <th scope="row"><?= __('退会年月日') ?></th>
           <td><?= h($user->delete_date) ?></td>
       </tr>
   </table>
 
-  <h4><?= __('Related Rentals') ?></h4>
+  <h4><?= __('貸出情報') ?></h4>
 
   <table class="test_table" border="1">
     <?php if (!empty($user->rentals)): ?>
@@ -95,10 +93,12 @@
             </td>
         </tr>
         <?php endforeach; ?>
+      <?php else:?>
+        <td>貸出情報はありません</td>
     <?php endif; ?>
   </table>
 
-  <h4><?= __('Related Reservations') ?></h4>
+  <h4><?= __('予約情報') ?></h4>
   <table class="test_table" border="1">
     <?php if (!empty($user->reservations)): ?>
         <tr>
@@ -123,6 +123,8 @@
             </td>
         </tr>
         <?php endforeach; ?>
+      <?php else:?>
+        <td>予約情報はありません</td>
     <?php endif; ?>
   </table>
 

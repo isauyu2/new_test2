@@ -6,9 +6,12 @@
 ?>
 
 <div id="right_top">
-  <h1>会員管理</h1>
+  <h1>会員情報検索</h1>
 
-  新規会員の情報を入力してください
+  <?= $this->Form->create(null,['type'=>'post','url'=>['controller'=>'Users','action'=>'search']]) ?>
+  <?=$this->Form->text('Users.query')?>
+  <?=$this->Form->submit('検索')?>
+  <?=$this->Form->end()?>
 
 </div>
 <div id="right_center">
