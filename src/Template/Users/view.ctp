@@ -13,8 +13,11 @@
 <div id="right_center">
 
 
-  <h3><?= h($user->id) ?></h3>
   <table id="test_table" border="1">
+    <tr>
+        <th scope="row"><?= __('ユーザーId') ?></th>
+        <td><?= $this->Number->format($user->id) ?></td>
+    </tr>
       <tr>
           <th scope="row"><?= __('姓') ?></th>
           <td><?= h($user->last_name) ?></td>
@@ -24,11 +27,11 @@
           <td><?= h($user->first_name) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Postal') ?></th>
+          <th scope="row"><?= __('郵便番号') ?></th>
           <td><?= h($user->postal) ?></td>
       </tr>
       <tr>
-          <th scope="row"><?= __('Address') ?></th>
+          <th scope="row"><?= __('住所') ?></th>
           <td><?= h($user->address) ?></td>
       </tr>
       <tr>
@@ -46,10 +49,6 @@
       <tr>
           <th scope="row"><?= __('Role') ?></th>
           <td><?= h($user->role) ?></td>
-      </tr>
-      <tr>
-          <th scope="row"><?= __('Id') ?></th>
-          <td><?= $this->Number->format($user->id) ?></td>
       </tr>
       <tr>
           <th scope="row"><?= __('Birthday') ?></th>
